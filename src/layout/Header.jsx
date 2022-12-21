@@ -2,18 +2,16 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 
 import { NavLink } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
 import NavigationBar from "../components/shared/NavigationBar";
 function Header() {
     return (
         <header>
             <NavigationBar>
-                <Navbar.Brand href="#home">Photo Gallery</Navbar.Brand>
-                <Nav className="me-auto">
-                    <NavLink to="/" className="nav-link">
-                        Home
-                    </NavLink>
+                <Navbar.Brand href="/">Photo Gallery</Navbar.Brand>
+                <Nav>
                     <NavLink className="nav-link" to="/">
-                        Test
+                    <SearchBar></SearchBar>
                     </NavLink>
                 </Nav>
             </NavigationBar>

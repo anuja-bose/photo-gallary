@@ -5,7 +5,7 @@ function Footer() {
   return (
       <footer> 
           <NavigationBar>
-            <Nav className="me-auto"> Demo 21 </Nav>
+            <Nav className="m-auto"> Powered by universe</Nav>
           </NavigationBar>
       </footer>
    
