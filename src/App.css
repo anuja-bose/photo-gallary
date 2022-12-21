@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.bg-navbar {
+  background-color: #465492;
+  
+}
+.active {
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.photoList li {
+  list-style: none;
+  padding: 5px 0px;
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchButton {
+  border: none;
+  background: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ul.photoList a,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+.noRecords {
+  padding: 20px 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.ptb-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-brand {
+  font-family: "Syne Tactile";
+  font-size: 30px;
+}
+
+footer {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-body {
+  font-size: 14px;
+}
+
+.mlr-5 {
+  margin-left: 5px;
+  margin-right: 5px;
 }
