@@ -24,9 +24,9 @@ const SearchBar = () => {
 
   return (
     <div className="flex">
-      <form class="form-inline">
-        <div class="input-group">
-          <input type="text" class="form-control search"
+      <form className="form-inline">
+        <div className="input-group">
+          <input type="text" className="form-control search"
             placeholder="Search free high-resolution photos"
             aria-label="Username" value={searchValue}
             onChange={handleInputChange}
@@ -34,7 +34,7 @@ const SearchBar = () => {
             aria-describedby="basic-addon1"
             />
 
-          <div class="input-group-prepend">
+          <div className="input-group-prepend">
             <span id="basic-addon1">
               <Button
                 onClick={handleButtonSearch}
