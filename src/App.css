@@ -53,3 +53,7 @@ footer {
 .object-cover {
   object-fit: cover;
 }
+
+.search{
+  width: 450px !important;
+}
