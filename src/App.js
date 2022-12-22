@@ -13,10 +13,11 @@ export const PhotoGalleryContext = createContext();
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
-  const { response, isLoading, error, fetchData } = useAxios(`search/photos?page=1&query=cats&client_id=${process.env.REACT_APP_ACCESS_KEY}`);
+  const { response,setResponse, isLoading, error, fetchData } = useAxios();
 
   const value = {
     response,
+    setResponse,
     isLoading,
     error,
     fetchData,

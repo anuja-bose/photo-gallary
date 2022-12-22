@@ -26,6 +26,7 @@ const useAxios = (param) => {
 
     return {
         response,
+        setResponse,
         isLoading,
         error,
         fetchData: url => fetchData(url)

@@ -11,14 +11,14 @@ const SearchBar = () => {
   }
   const handleButtonSearch = () => {
     fetchData(`search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
-    //setSearchValue("");
+    setSearchValue("");
     setSearchKeyword(searchValue);
   }
   const handleEnterSearch = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
       fetchData(`search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
-      //setSearchValue("");
+      setSearchValue("");
       setSearchKeyword(searchValue);
     }
   }

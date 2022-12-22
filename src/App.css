@@ -57,3 +57,21 @@ footer {
 .search{
   width: 450px !important;
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #c1bfbf;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron{
+  background-image:url('assets/bg.jpeg');
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
