@@ -8,7 +8,7 @@ const Photos = () => {
 
   return (
     <>
-      {searchKeyword ? <h1>Results for {searchKeyword || ''}</h1> : <></>}
+      {searchKeyword ? <h4>Results for {searchKeyword || ''}</h4> : <></>}
       <div>
         {isLoading ? <ShadowLoading item={10} /> : response.map((data, key) => <SinglePhoto key={key} data={data} />)}
       </div>
