@@ -1,6 +1,6 @@
 const ShadowLoading = ({ item }) => {
-    return [...Array(item).keys()].map(() => (
-      <div className="animate-pulse">
+    return [...Array(item).keys()].map((ind) => (
+      <div key={ind} className="animate-pulse">
         <div></div>
       </div>
     ))

@@ -8,8 +8,6 @@ const HomePage = () => {
 
   const fetchAPI = async() => {
     const response = await axios.get('https://api.unsplash.com/photos/?client_id=xz5MUitr6CDevL5gRiAEXSHVeD14I4XYpSLvv6zTd2s');
-    console.log("response.data",response.data);
-    console.log("response.data type of", typeof response.data);
     const data = await response.data;
     setPhotos(data);
   }

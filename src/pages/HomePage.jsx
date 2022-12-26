@@ -4,6 +4,8 @@ import Photos from '../components/Photos.jsx';
 import { useContext } from 'react';
 import { PhotoGalleryContext } from '../App.js';
 import axios from 'axios';
+
+
 const HomePage = () => {
   const { setResponse,setSearchKeyword } = useContext(PhotoGalleryContext);
   const fetchAPI = async () => {

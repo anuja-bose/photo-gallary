@@ -1,18 +1,25 @@
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+
 
 const useAxios = (param) => {
     const [response, setResponse] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
-    axios.defaults.baseURL = 'https://api.unsplash.com';
+     axios.defaults.baseURL = `${process.env.REACT_APP_BASE_URL}`;
 
     const fetchData = async (url) => {
         try {
             setIsLoading(true);
             const res = await axios(url);
-            setResponse(res.data.results);
+            if(url.includes("search")){
+                setResponse(res.data.results);
+            }else {
+                setResponse(res.data);
+            }
+
+           
         } catch (err) {
             setError(err)
         } finally {
