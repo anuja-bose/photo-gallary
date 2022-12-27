@@ -19,7 +19,7 @@ function App() {
               <Route exact path="/" element={<HomePage />} />
               <Route path="/home" element={<HomePage />} />
               <Route
-                path="/photos/search/:keyWord"
+                path="/photos/search/:keyword"
                 element={<SearchPage />}
               />
 

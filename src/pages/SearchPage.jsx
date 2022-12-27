@@ -1,26 +1,24 @@
 
 import {  Container } from 'react-bootstrap';
 import Photos from '../components/Photos.jsx';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import PhotoGalleryContext from "../context/PhotoGalleryContext";
 
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 
 const SearchPage = () => {
-  const { setResponse,setSearchKeyword } = useContext(PhotoGalleryContext);
   const params = useParams();
-  
-  if(params.keyWord !== ""){
-    
-    setSearchKeyword(params.keyWord);
-  }
-  
+  const { setSearchKeyword,fetchData } = useContext(PhotoGalleryContext);
 
+  useEffect(() => {
+    if(params.keyword !== ""){
+      setSearchKeyword(params.keyword);
+      fetchData(`search/photos?page=1&query=${params.keyword}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
+    }
+  }, [params.keyword]);
 
   return (<Container>
-
     <Photos></Photos>
   </Container>
   )

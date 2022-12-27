@@ -10,16 +10,18 @@ const SearchBar = () => {
     setSearchValue(e.target.value);
   }
   const handleButtonSearch = () => {
-    fetchData(`search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
-    setSearchValue("");
     setSearchKeyword(searchValue);
+    //setSearchValue("");
+    console.log("before navigate");
+    window.location.replace("/photos/search/"+searchValue);
+    console.log("after navigate");
   }
   const handleEnterSearch = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      fetchData(`search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
       setSearchValue("");
       setSearchKeyword(searchValue);
+      window.location.replace("/photos/search/"+searchValue);
     }
   }
 
