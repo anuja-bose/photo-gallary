@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container,Row,Col} from 'react-bootstrap';
 
-function Content({children}) {
+function PageContent({children}) {
   return (
     <Container className='ptb-20'>
         <Row>
@@ -13,4 +13,4 @@ function Content({children}) {
   )
 }
 
-export default Content
+export default PageContent

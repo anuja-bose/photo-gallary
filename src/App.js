@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { createContext, useState } from "react";
 import './App.css';
 import Header from './layout/Header';
-import Content from './layout/Content';
+import PageContent from './layout/PageContent';
 import Footer from './layout/Footer';
 import HomePage from './pages/HomePage';
 import useAxios from "./hooks/useAxios";
@@ -30,11 +30,12 @@ function App() {
       <div className="container">
         <BrowserRouter>
           <Header />
-          <Content>
+          <PageContent>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
             </Routes>
-          </Content>
+            
+          </PageContent>
           <Footer />
         </BrowserRouter>
       </div>
