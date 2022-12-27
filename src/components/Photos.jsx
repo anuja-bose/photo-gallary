@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { PhotoGalleryContext } from "../App"
+import PhotoGalleryContext from "../context/PhotoGalleryContext";
 import ShadowLoading from "./ShadowLoading";
 import SinglePhoto from "./SinglePhoto";
 

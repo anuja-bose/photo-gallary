@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { Button } from "react-bootstrap";
-import { PhotoGalleryContext } from "../App";
+import PhotoGalleryContext from "../context/PhotoGalleryContext";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");

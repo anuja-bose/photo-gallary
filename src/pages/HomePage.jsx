@@ -2,7 +2,8 @@
 import { Button, Container } from 'react-bootstrap';
 import Photos from '../components/Photos.jsx';
 import { useContext } from 'react';
-import { PhotoGalleryContext } from '../App.js';
+import PhotoGalleryContext from "../context/PhotoGalleryContext";
+
 import axios from 'axios';
 
 

@@ -5,13 +5,15 @@ import useAxios from "../hooks/useAxios";
 const PhotoGalleryContext = createContext();
 
 export const PhotoGalleryProvider = ({ children }) => {
+ 
     const [searchKeyword, setSearchKeyword] = useState('');
-    const { response, isLoading, error, fetchData } = useAxios(`search/photos?page=1&query=cats&client_id=${process.env.REACT_APP_ACCESS_KEY}`);
+    const { response,setResponse, isLoading, error, fetchData } = useAxios(`/photos/?client_id=${process.env.REACT_APP_ACCESS_KEY}`);
 
     return (
         <PhotoGalleryContext.Provider
             value={{
                 response,
+                setResponse,
                 isLoading,
                 error,
                 fetchData,
