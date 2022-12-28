@@ -17,7 +17,6 @@ function App() {
           <PageContent>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
-              <Route path="/home" element={<HomePage />} />
               <Route
                 path="/photos/search/:keyword"
                 element={<SearchPage />}

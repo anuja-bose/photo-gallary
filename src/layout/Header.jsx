@@ -10,9 +10,7 @@ function Header() {
             <NavigationBar>
                 <Navbar.Brand href="/">Photo Gallery</Navbar.Brand>
                 <Nav>
-                    <NavLink className="nav-link" to="/">
                     <SearchBar></SearchBar>
-                    </NavLink>
                 </Nav>
             </NavigationBar>
         </header>
