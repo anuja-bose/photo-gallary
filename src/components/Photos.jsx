@@ -2,6 +2,7 @@ import { useContext } from "react"
 import PhotoGalleryContext from "../context/PhotoGalleryContext";
 import ShadowLoading from "./ShadowLoading";
 import SinglePhoto from "./SinglePhoto";
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Photos = () => {
   const { response, isLoading, searchKeyword } = useContext(PhotoGalleryContext);
@@ -10,11 +11,21 @@ const Photos = () => {
     <>
       {searchKeyword ? <h4>Results for {searchKeyword || ''}</h4> : <></>}
       <div>
-        {response.length == 0 ? <div>No records found</div> : <></>}
+     
+        {response.length === 0 ? <div>No records found</div> : <></>}
         {isLoading ? <ShadowLoading item={10} /> : response.map((data, key) => <SinglePhoto key={key} data={data} />)}
       </div>
     </>
   )
+
+  // return(
+  //   <Container>
+  //   <Row>
+  //     <Col>{isLoading ? <ShadowLoading item={10} /> : response.map((data, key) => <SinglePhoto key={key} data={data} />)}</Col>
+     
+  //   </Row>
+  // </Container>
+  //)
 }
 
 export default Photos
