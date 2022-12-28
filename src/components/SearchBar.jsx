@@ -26,15 +26,12 @@ const SearchBar = () => {
   }
 
   return (
-    <div className="flex">
       <div className="input-group">
-        <div className="form-outline">
           <input type="search" id="form1" className="form-control search" 
           placeholder="Search free high-resolution photos"
           onChange={handleInputChange}
           onKeyDown={handleEnterSearch}/>
 
-        </div>
         <button type="button" className="btn btn-primary"  onClick={handleButtonSearch}
                 disabled={!searchValue}>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
@@ -42,7 +39,6 @@ const SearchBar = () => {
           </svg>
         </button>
       </div>
-    </div>
   )
 }
 

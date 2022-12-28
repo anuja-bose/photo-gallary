@@ -23,7 +23,7 @@ const HomePage = () => {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <h1 className="display-4">Welcome!</h1>
-        <SearchBar></SearchBar>
+        <div className='lead'><SearchBar></SearchBar></div>
         <p className="lead">Trending:flower,wallpapers,backgrounds,happy,love</p>
       </div>
     </div>

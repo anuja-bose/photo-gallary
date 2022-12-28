@@ -4,7 +4,6 @@ function NavigationBar({ children }) {
     return (
         <Navbar bg="navbar" variant="light">
             <Container>{children}</Container>
-   
         </Navbar>
     );
 }
