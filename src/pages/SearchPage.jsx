@@ -14,7 +14,7 @@ const SearchPage = () => {
   useEffect(() => {
     if(params.keyword !== ""){
       setSearchKeyword(params.keyword);
-      fetchData(`search/photos?page=1&query=${params.keyword}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
+      fetchData(`search/photos?query=${params.keyword}&client_id=${process.env.REACT_APP_ACCESS_KEY}`)
     }
   }, [params.keyword]);
 

@@ -1,7 +1,5 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-
-import { NavLink } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import NavigationBar from "../components/shared/NavigationBar";
 function Header() {

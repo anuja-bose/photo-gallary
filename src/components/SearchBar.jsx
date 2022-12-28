@@ -1,27 +1,24 @@
-import { useContext, useState } from "react"
-import { Button } from "react-bootstrap";
+import { useContext, useState } from "react";
+import { useNavigate} from 'react-router-dom';
 import PhotoGalleryContext from "../context/PhotoGalleryContext";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
-  const { fetchData, setSearchKeyword } = useContext(PhotoGalleryContext);
+  const {setSearchKeyword } = useContext(PhotoGalleryContext);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setSearchValue(e.target.value);
   }
   const handleButtonSearch = () => {
-    setSearchKeyword(searchValue);
-    //setSearchValue("");
-    console.log("before navigate");
-    window.location.replace("/photos/search/" + searchValue);
-    console.log("after navigate");
+      setSearchKeyword(searchValue);
+      navigate('/photos/search/' + searchValue);
   }
   const handleEnterSearch = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      setSearchValue("");
       setSearchKeyword(searchValue);
-      window.location.replace("/photos/search/" + searchValue);
+      navigate('/photos/search/' + searchValue);
     }
   }
 
@@ -31,7 +28,6 @@ const SearchBar = () => {
           placeholder="Search free high-resolution photos"
           onChange={handleInputChange}
           onKeyDown={handleEnterSearch}/>
-
         <button type="button" className="btn btn-primary"  onClick={handleButtonSearch}
                 disabled={!searchValue}>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
