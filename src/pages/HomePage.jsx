@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import PhotoGalleryContext from "../context/PhotoGalleryContext";
 
 import axios from 'axios';
+import SearchBar from '../components/SearchBar.jsx';
 
 
 const HomePage = () => {
@@ -22,7 +23,7 @@ const HomePage = () => {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <h1 className="display-4">Welcome!</h1>
-        <Button onClick={fetchAPI}>Browse photos</Button>
+        <SearchBar></SearchBar>
         <p className="lead">Trending:flower,wallpapers,backgrounds,happy,love</p>
       </div>
     </div>
