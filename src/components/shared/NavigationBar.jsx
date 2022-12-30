@@ -2,8 +2,9 @@ import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 function NavigationBar({ children }) {
     return (
-        <Navbar bg="navbar" variant="light">
-            <Container>{children}</Container>
+        <Navbar bg="navbar" className="fixed-top" variant="light">
+            <Container fluid>{children}</Container>
+            
         </Navbar>
     );
 }

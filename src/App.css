@@ -54,8 +54,8 @@ footer {
   object-fit: cover;
 }
 
-.search{
-  width: 450px !important;
+.search {
+  width: 80% !important;
 }
 
 footer {
@@ -68,28 +68,55 @@ footer {
   text-align: center;
 }
 
-.jumbotron{
-  background-image:url('assets/bg.jpeg');
+.jumbotron {
+  background-image: url('assets/bg.jpeg');
   color: white;
   text-align: center;
   padding: 20px;
   margin-bottom: 10px;
 }
 
-.ml-5{
+.ml-5 {
   margin-left: 5px;
 }
-.mlr-5{
+
+.mlr-5 {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.likes{
+.likes {
   margin-right: 5px;
   color: red;
 }
 
-.nolikes{
+.nolikes {
   margin-right: 5px;
   color: gray;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  height: 100px;
+  background-color: white;
+  z-index: 50;
+}
+
+header .row {
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.btn-secondary {
+  background-color: #fff !important;
+  border-color: #d1d1d1 !important;
+  color: #767676 !important;
+  font-size: 14px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  padding: 0 11px !important;
+}
+.btn-ham{
+  padding: 0 !important;
 }

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate} from 'react-router-dom';
-import PhotoGalleryContext from "../context/PhotoGalleryContext";
+import PhotoGalleryContext from "../../context/PhotoGalleryContext";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");

@@ -6,14 +6,20 @@ import Footer from './layout/Footer';
 import HomePage from './pages/HomePage';
 import { PhotoGalleryProvider } from "./context/PhotoGalleryContext";
 import SearchPage from './pages/SearchPage';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import ExplorePage from './pages/ExplorePage';
+import AdvertisePage from './pages/AdvertisePage';
+import PlusPage from './pages/PlusPage';
 function App() {
-
-
   return (
     <PhotoGalleryProvider>
-      <div className="container">
+      <ThemeProvider
+  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+  minBreakpoint="xxs"
+>
+      <div className="app">
         <BrowserRouter>
-          <Header />
+          <Header className="fixed-top" />
           <PageContent>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
@@ -21,6 +27,12 @@ function App() {
                 path="/photos/search/:keyword"
                 element={<SearchPage />}
               />
+               <Route  path="/explore" element={<ExplorePage />} />
+               <Route  path="/advertise" element={<AdvertisePage />} />
+               <Route  path="/plus" element={<PlusPage/>} />
+
+               <Route  path="/join" element={<HomePage />} />
+               <Route  path="/login" element={<HomePage />} />
 
             </Routes>
 
@@ -28,6 +40,7 @@ function App() {
           <Footer />
         </BrowserRouter>
       </div>
+      </ThemeProvider>
     </PhotoGalleryProvider>
   );
 }
