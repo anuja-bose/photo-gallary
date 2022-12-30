@@ -68,12 +68,25 @@ footer {
   text-align: center;
 }
 
-.jumbotron {
+.banner.jumbotron {
   background-image: url('assets/bg.jpeg');
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 100px 50px;
   margin-bottom: 10px;
+  height: 600px;
+}
+
+.callout .jumbotron {
+  background-image: url("https://unsplash-assets.imgix.net/marketing/awards/awards-logo-small.png");
+  background-color: #111;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 20px 0px;
+  height: 200px;
 }
 
 .ml-5 {
@@ -117,6 +130,7 @@ header .row {
   line-height: 30px !important;
   padding: 0 11px !important;
 }
-.btn-ham{
+
+.btn-ham {
   padding: 0 !important;
 }

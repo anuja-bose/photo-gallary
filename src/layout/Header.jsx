@@ -8,7 +8,7 @@ function Header() {
         <header>
             <NavigationBar>
                 <Row>
-                    <Col className="d-flex" xxl="auto" xl="auto" sm="auto" md="auto" lg="auto">
+                    <Col className="d-flex" xxl="auto" xl="auto" xs="auto" xss="auto" sm="auto" md="auto" lg="auto">
                         <Navbar.Brand href="/">
                             <img width={40} height={40} className="img-thumbnail rounded object-cover" src={logo} alt="logo" />
                         </Navbar.Brand>
@@ -18,7 +18,7 @@ function Header() {
                             <SearchBar className="lg"></SearchBar>
                         </Nav>
                     </Col>
-                    <Col className="d-flex" md="auto">
+                    <Col className="d-flex d-none d-sm-block d-flex" md="auto" >
                         <Nav
                             activeKey="/"
                         >
@@ -57,7 +57,7 @@ function Header() {
                             <Nav.Item>
                                 <Nav className="nav-link">
                                     <Button variant="link" className="btn-ham">
-                                        <svg width="24" height="24" class="BOTrp" viewBox="0 0 32 32" version="1.1" aria-hidden="false"><desc lang="en-US">navigation menu</desc><path d="M4 21.3h24V24H4v-2.7zM4 8v2.7h24V8H4zm0 9.3h24v-2.7H4v2.7z"></path></svg>
+                                        <svg width="24" height="24" viewBox="0 0 32 32" version="1.1" aria-hidden="false"><desc lang="en-US">navigation menu</desc><path d="M4 21.3h24V24H4v-2.7zM4 8v2.7h24V8H4zm0 9.3h24v-2.7H4v2.7z"></path></svg>
                                     </Button>
                                 </Nav>
                             </Nav.Item>
