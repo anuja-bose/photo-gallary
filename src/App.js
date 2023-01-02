@@ -10,6 +10,11 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import ExplorePage from './pages/ExplorePage';
 import AdvertisePage from './pages/AdvertisePage';
 import PlusPage from './pages/PlusPage';
+import LandingLayout from './layout/LandingLayout';
+import LoginPage from './pages/LoginPage';
+import JoinPage from './pages/JoinPage';
+import LoginLayout from './layout/LoginLayout';
+import JoinLayout from './layout/JoinLayout';
 function App() {
   return (
     <PhotoGalleryProvider>
@@ -19,24 +24,42 @@ function App() {
 >
       <div className="app">
         <BrowserRouter>
-          <Header className="fixed-top" />
-          <PageContent>
+          
+          
             <Routes>
-              <Route exact path="/" element={<HomePage />} />
-              <Route
-                path="/photos/search/:keyword"
-                element={<SearchPage />}
-              />
-               <Route  path="/explore" element={<ExplorePage />} />
-               <Route  path="/advertise" element={<AdvertisePage />} />
-               <Route  path="/plus" element={<PlusPage/>} />
+              <Route exact path="/" element={<LandingLayout>
+                    <HomePage/>
+               </LandingLayout>} />
 
-               <Route  path="/join" element={<HomePage />} />
-               <Route  path="/login" element={<HomePage />} />
+              <Route
+                path="/photos/search/:keyword" element={<LandingLayout>
+                  <SearchPage/>
+             </LandingLayout>} />
+
+               <Route  path="/explore" element={<LandingLayout>
+                    <ExplorePage/>
+               </LandingLayout>} />
+
+               <Route  path="/advertise" element={<LandingLayout>
+                    <AdvertisePage/>
+               </LandingLayout>} />
+
+               <Route  path="/plus" element={<LandingLayout>
+                    <PlusPage/>
+               </LandingLayout>} />
+
+               <Route  path="/join" element={<JoinLayout>
+                <JoinPage></JoinPage>
+               </JoinLayout>} />
+
+               <Route  path="/login" element={<LoginLayout>
+                <LoginPage></LoginPage>
+               </LoginLayout>} />
+
+              
 
             </Routes>
-
-          </PageContent>
+            
           <Footer />
         </BrowserRouter>
       </div>

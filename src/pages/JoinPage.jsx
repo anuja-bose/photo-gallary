@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const JoinPage = () => {
   return (<Container>
-    <p>Explore Page</p>
+    <p>Join Page</p>
   </Container>
   )
 }

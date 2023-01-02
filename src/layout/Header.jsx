@@ -45,7 +45,7 @@ function Header() {
                                 </Nav>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="join">
+                                <Nav.Link href="/join">
                                     Sign up
                                 </Nav.Link>
                             </Nav.Item>

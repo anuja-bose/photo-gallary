@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const LoginPage = () => {
   return (<Container>
-    <p>Explore Page</p>
+    <p>Login Page</p>
   </Container>
   )
 }
